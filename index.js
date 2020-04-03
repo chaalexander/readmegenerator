@@ -22,7 +22,7 @@ function inquireQuestions() {
       },
       {
         type: "input",
-        message: "Project Name",
+        message: "What is the name of your Project?",
         name: "project"
       },
       {
@@ -62,7 +62,29 @@ function inquireQuestions() {
 
     ])
     .then(function (response) {
-      console.log(response);
+      // console.log(response);
+
+      const usersInfo = `# <h1>${response.project}</h1>
+# <h2>Contributor
+<a href= "https://github.com/${response.username}" target="_blank">${response.username} </a>
+# <h2> Technology Stack
+${response.technology}
+# <h2> About 
+${response.description}
+# <h2> License
+${response.license}
+# <h2> Contact
+<a href= "https://github.com/${response.username}" target="_blank">GitHub</a>
+<a href= "${response.portfolio}">Portfolio</a>
+<a href= "https://www.linkedin.com/${response.linkedin}" target="_blank">LinkedIn</a>`
+
+      // add email and profile picture inside of the contact with the api from github.
+      fs.writeFile("README.md", usersInfo, function (err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("Success");
+      })
 
     });
   //end function
@@ -77,33 +99,14 @@ function githubAPICall() {
   axios
     .get(queryUrl)
     .then(function (res) {
-      console.log(res.data);
+      // console.log(res.data);
 
 
 
     }).catch(function (err) {
-
       console.log(err);
-
     });
-
   //end function
 }
+
 // githubAPICall()
-// fs.writeFile("repos.txt", JSON.stringify(repos), + '/n', function(err) {
-
-//   if (err) {
-//     return console.log(err);
-//   }
-
-//   console.log("Success!");
-
-// });
-// fs.writeFile('log.txt', JSON.stringify(response), function(err) {
-//     if (err) {
-//         console.log('error');
-//     }
-//     else{
-//         console.log('success');
-//     }
-// })   
