@@ -1,13 +1,13 @@
-# <h1>d</h1>
+# <h1>Read me Generator</h1>
 # <h2>Contributor
-<a href= "https://github.com/d" target="_blank">d </a>
+<a href= "https://github.com/chaalexander" target="_blank">chaalexander </a>
 # <h2> Technology Stack
-
+Node.Js
 # <h2> About 
-d
+An application run on node made to help create a read me 
 # <h2> License
 MIT
 # <h2> Contact
-<a href= "https://github.com/d" target="_blank">GitHub</a>
-<a href= "d">Portfolio</a>
-<a href= "https://www.linkedin.com/d" target="_blank">LinkedIn</a>
+<a href= "https://github.com/chaalexander" target="_blank">GitHub</a>
+<a href= "chaalexander.io">Portfolio</a>
+<a href= "https://www.linkedin.com/cha-alexander" target="_blank">LinkedIn</a>
