@@ -21,7 +21,7 @@ function inquireQuestions() {
         name: "password"
       },
       {
-        type: "Input",
+        type: "input",
         message: "Project Name",
         name: "project"
       },
@@ -40,7 +40,25 @@ function inquireQuestions() {
         message: "Technology Used",
         choices: ["Node.Js", "Express", "JavaScript", "jQuery", "React.js", "React", "GIT", "GitHub", "MongoDB", "MySQL", "Firebase", "Handlebars", "HTML", "CSS", "Bootstrap", "Media Queries", "APIs", "Microsoft Suite", "Heroku", "Command- Line"],
         name: "technology"
-      }
+      },
+
+      {
+        type: "list",
+        message: "License",
+        choices: ["MIT", "BSD", "ISC", "Apache", "GPL"],
+        name: "license"
+      },
+      {
+        type: "input",
+        message: "What is your Linked-in username?",
+        name: "linkedin"
+      },
+      {
+        type: "input",
+        message: "What is you Portfolio link?",
+        name: "portfolio"
+      },
+
 
     ])
     .then(function (response) {
