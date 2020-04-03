@@ -19,8 +19,7 @@
   "homepage": "https://github.com/chaalexander/readmegenerator#readme",
   "dependencies": {
     "axios": "^0.19.2",
-    "dotenv": "^8.2.0",
-    "inquirer": "^7.1.0",
-    "primeng": "^9.0.5"
+    "datafire": "^2.26.2",
+    "inquirer": "^7.1.0"
   }
 }
