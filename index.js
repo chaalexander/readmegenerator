@@ -67,6 +67,7 @@ function inquireQuestions() {
     });
   //end function
 }
+inquireQuestions()
 
 function githubAPICall() {
 
@@ -88,7 +89,7 @@ function githubAPICall() {
 
   //end function
 }
-githubAPICall()
+// githubAPICall()
 // fs.writeFile("repos.txt", JSON.stringify(repos), + '/n', function(err) {
 
 //   if (err) {
