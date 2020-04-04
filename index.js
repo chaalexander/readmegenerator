@@ -37,11 +37,7 @@ function inquireQuestions() {
         message: "Description",
         name: "description"
       },
-      {
-        type: "input",
-        message: "Table of Contents",
-        name: "content"
-      },
+
       {
         type: "input",
         message: "Installation",
@@ -120,30 +116,30 @@ function githubAPICall(userName, response) {
 function generateMD(response, res) {
 
   const usersInfo = `
-<img src="${res.data.avatar_url}widht:40px; height:40px">
-<h1>${response.project}</h1>   
+<img src="${res.data.avatar_url} style= "width:20px; height:20px">
+<h1>${response.project}</h1> 
+<h2> Table of Contents </h2>
+<p><a href="#contributors">Contributors</a></p>   
 <h2> Description </h2>
 <p>${response.description}</p>   
-<h2> Table of Contents </h2>
-<p>${response.table}</p>  
 <h2> Installation </h2>
 <p>${response.installation}</p>          
 <h2> Technology Stack </h2>          
 <p>${response.technology}</p>          
-<h2>Usage</h2>
+<h2> Usage </h2>
 <p>${response.usage}</p>   
-<h2> Contributors </h2>
+<h2 id="contributor"> Contributors </h2>
 <p>${response.contributors}</p>
 <h2> Contact </h2>         
 <h5> Name: ${res.data.name}</h5>       
 <h5><a href= "https://github.com/${response.username}" target="_blank">GitHub</a></h5>    
- <h5><a href= "${response.portfolio}">Portfolio</a></h5>  
-<h5>Email: []()          
+<h5><a href= "${response.portfolio}">Portfolio</a></h5>  
+<h5>Email:</h5>       
 <h5><a href= "https://www.linkedin.com/in/${response.linkedin}" target="_blank">LinkedIn</a></h5>    
-<h2> License
-${response.license}        
-<h2>Tests
-${response.tests}`
+<h2> License</h2>
+<p>${response.license}</p>        
+<h2>Tests</h2>
+<p>${response.tests}</p>`
 
   // add email and profile picture inside of the contact with the api from github.
   fs.writeFile("README.md", usersInfo, function (err) {
