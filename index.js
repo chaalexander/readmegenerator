@@ -109,7 +109,7 @@ function generateMD(response, res) {
 <img src="${res.data.avatar_url}">
 <h1>${response.project}</h1> 
 <h2 id="contributors"> Contributors </h2>
-<li><a href= "https://github.com/${response.contributors}>${response.contributors}</a></li> 
+<p><a href= "https://github.com/${response.contributors}>${response.contributors}</a></p> 
 <h2> Table of Contents </h2>
 <li><a href="#contributors">Contributors</a></li>   
 <li><a href="#description">Description</a></li>  
