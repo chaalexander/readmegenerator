@@ -108,10 +108,10 @@ function generateMD(response, res) {
   const usersInfo = `
 <img src="${res.data.avatar_url}">
 <h1>${response.project}</h1> 
-<h2 id="cont"> Contributors </h2>
-<p><a href= "https://github.com/${response.contributors}>${response.contributors}</a></p> 
+<h2 id="contributors"> Contributors </h2>
+<p>${response.contributors}</p> 
 <h2> Table of Contents </h2>
-<li><a href="#cont">Contributors</a></li>   
+<li><a href="#contributors">Contributors</a></li>   
 <li><a href="#description">Description</a></li>  
 <li><a href="#installation">Installation</a></li> 
 <li><a href="#tech">Technology Stack</a></li> 
