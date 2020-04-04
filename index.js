@@ -3,7 +3,19 @@ const inquirer = require('inquirer');
 const axios = require('axios');
 require(`dotenv`).config();
 
+// const {
+//   BadgeFactory
+// } = require('gh-badges')
 
+// const bf = new BadgeFactory()
+
+// const format = {
+//   text: ['license', `${response.license}`],
+//   color: 'green',
+//   template: 'flat',
+// }
+
+// const svg = bf.create(format)
 
 
 // const badge = require('gh-badges');
@@ -109,20 +121,6 @@ function githubAPICall(userName, response) {
 }
 
 function generateMD(response, res) {
-  const {
-    BadgeFactory
-  } = require('gh-badges')
-
-  const bf = new BadgeFactory()
-
-  const format = {
-    text: ['license', `${response.license}`],
-    color: 'green',
-    template: 'flat',
-  }
-
-  const svg = bf.create(format)
-  console.log(svg);
 
   const usersInfo = `
 <img src="${res.data.avatar_url}">
