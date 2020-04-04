@@ -116,7 +116,7 @@ function githubAPICall(userName, response) {
 function generateMD(response, res) {
 
   const usersInfo = `
-<img src="${res.data.avatar_url}" style= "width:20px; height:20px">
+<img src="${res.data.avatar_url}" style= width:50px>
 <h1>${response.project}</h1> 
 <h2> Table of Contents </h2>
 <p><a href="#contributors">Contributors</a></p>   
