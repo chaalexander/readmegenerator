@@ -9,8 +9,8 @@ function inquireQuestions() {
   inquirer
     .prompt([{
         type: "input",
-        message: "GitHub username",
-        name: "username"
+        message: "What is your full name?",
+        name: "name"
       },
       // {
       //   type: "password",
@@ -46,7 +46,7 @@ function inquireQuestions() {
       {
         type: "checkbox",
         message: "Technology Used",
-        choices: ["Node.Js", "Express", "JavaScript", "jQuery", "React.js", "React", "GIT", "GitHub", "MongoDB", "MySQL", "Firebase", "Handlebars", "HTML", "CSS", "Bootstrap", "Media Queries", "APIs", "Microsoft Suite", "Heroku", "Command- Line"],
+        choices: ["Node.Js ", "Express ", "JavaScript ", "jQuery ", "React.js ", "React ", "GIT ", "GitHub ", "MongoDB ", "MySQL ", "Firebase ", "Handlebars ", "HTML ", "CSS ", "Bootstrap ", "Media Queries ", "APIs ", "Microsoft Suite ", "Heroku ", "Command- Line "],
         name: "technology"
       },
       {
