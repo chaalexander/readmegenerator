@@ -1,8 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const axios = require('axios');
-const datafire = require('datafire');
-let userName = ""
+const badge = require('gh-badges');
+require(`dotenv`).config();
+// let userName = ""
 
 function inquireQuestions() {
   inquirer
@@ -11,20 +12,25 @@ function inquireQuestions() {
         message: "GitHub username",
         name: "username"
       },
-      {
-        type: "password",
-        message: "GitHub password",
-        name: "password"
-      },
+      // {
+      //   type: "password",
+      //   message: "GitHub password",
+      //   name: "password"
+      // },
       {
         type: "input",
-        message: "What is the name of your Project?",
+        message: "GitHub username",
+        name: "username"
+      },
+      // {
+      //     type: "password",
+      //     message: "GitHub password",
+      //     name: "password"
+      // },
+      {
+        type: "Input",
+        message: "Project Name",
         name: "project"
-      },
-      {
-        type: "input",
-        message: "Contributors",
-        name: "contributors"
       },
       {
         type: "input",
@@ -32,12 +38,26 @@ function inquireQuestions() {
         name: "description"
       },
       {
+        type: "input",
+        message: "Table of Contents",
+        name: "content"
+      },
+      {
+        type: "input",
+        message: "Installation",
+        name: "installation"
+      },
+      {
         type: "checkbox",
         message: "Technology Used",
         choices: ["Node.Js", "Express", "JavaScript", "jQuery", "React.js", "React", "GIT", "GitHub", "MongoDB", "MySQL", "Firebase", "Handlebars", "HTML", "CSS", "Bootstrap", "Media Queries", "APIs", "Microsoft Suite", "Heroku", "Command- Line"],
         name: "technology"
       },
-
+      {
+        type: "input",
+        message: "Usage",
+        name: "usage"
+      },
       {
         type: "list",
         message: "License",
@@ -46,59 +66,48 @@ function inquireQuestions() {
       },
       {
         type: "input",
-        message: "What is your Linked-in username?",
+        message: "Contributors",
+        name: "contributors"
+      },
+      {
+        type: "input",
+        message: "What is your LinkedIn URL?",
         name: "linkedin"
       },
       {
         type: "input",
-        message: "What is you Portfolio link?",
+        message: "What is your portfolio URL?",
         name: "portfolio"
       },
-
-
+      {
+        type: "input",
+        message: "Tests?",
+        name: "tests"
+      }
     ])
     .then(function (response) {
-      userName = response.username;
-      const usersInfo = `# <h1>${response.project}</h1>
-# <h2>Contributor
-<a href= "https://github.com/${response.username}" target="_blank">${response.username} </a>
-# <h2> Technology Stack
-${response.technology}
-# <h2> About 
-${response.description}
-# <h2> License
-${response.license}
-# <h2> Contact
-<a href= "https://github.com/${response.username}" target="_blank">GitHub</a>
-<a href= "${response.portfolio}">Portfolio</a>
-<a href= "https://www.linkedin.com/${response.linkedin}" target="_blank">LinkedIn</a>`
+      let userName = response.username
 
-      // add email and profile picture inside of the contact with the api from github.
-      fs.writeFile("README.md", usersInfo, function (err) {
-
-        if (err) {
-          return console.log(err);
-        }
-
-        console.log("Success!");
-
-      });
-      githubAPICall();
+      githubAPICall(userName, response);
     });
 }
 inquireQuestions()
 
-function githubAPICall() {
+function githubAPICall(userName, response) {
   console.log(userName);
   const queryUrl = `https://api.github.com/users/` + userName;
 
   axios
-    .get(queryUrl)
+    .get(queryUrl, {
+      header: {
+        "Authorization": `token ${process.env.GH_TOKEN}`
+      }
+    })
     .then(function (res) {
       console.log(res.data);
 
 
-
+      generateMD(response, res);
     }).catch(function (err) {
 
       console.log(err);
@@ -106,4 +115,44 @@ function githubAPICall() {
     });
 
   //end function
+}
+
+function generateMD(response, res) {
+
+  const usersInfo = `
+  <img src="${res.data.avatar_url}">
+# <h1>${response.project}</h1>   
+# <h2> Description
+ ${response.description}   
+#<h2> Table of Contents
+${response.table}  
+#<h2> Installation
+${response.installation}          
+# <h2> Technology Stack          
+${response.technology}          
+# <h2>Usage
+${response.usage}    
+#<h2> Contributors
+${response.contributors}
+# <h2> Contact          
+<h5> Name: ${res.data.name}          
+<h5> Github [${response.username}](${res.data.html_url})  
+<a href= "${response.portfolio}">Portfolio</a>  
+<h5>Email: []()          
+<a href= "https://www.linkedin.com/in/${response.linkedin}" target="_blank">LinkedIn</a>    
+# <h2> License
+${response.license}        
+#<h2>Tests
+${response.tests}`
+
+  // add email and profile picture inside of the contact with the api from github.
+  fs.writeFile("README.md", usersInfo, function (err) {
+
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log("Success!");
+
+  });
 }
