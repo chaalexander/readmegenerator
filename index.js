@@ -109,7 +109,7 @@ function generateMD(response, res) {
 <img src="${res.data.avatar_url}">
 <h1>${response.project}</h1> 
 <h2 id="contributors"> Contributors </h2>
-<li><a href= "https://github.com/${response.contributors} target="_blank">${response.contributors}</a></li> 
+<li><a href= "https://github.com/${response.contributors}>${response.contributors}</a></li> 
 <h2> Table of Contents </h2>
 <li><a href="#contributors">Contributors</a></li>   
 <li><a href="#description">Description</a></li>  
@@ -129,16 +129,16 @@ function generateMD(response, res) {
 <p>${response.usage}</p>   
 <h2 id="contact"> Contact </h2>         
 <h5> Name: ${response.name}</h5>       
-<h5><a href= "https://github.com/${response.username} target="_blank">GitHub</a></h5>    
+<h5><a href= "https://github.com/${response.username}">GitHub</a></h5>    
 <h5><a href= "${response.portfolio} target="_blank">Portfolio</a></h5>  
-<h5>Email:[${res.data.email}](${res.data.email})</h5>       
-<h5><a href= "https://www.linkedin.com/in/${response.linkedin} target="_blank">LinkedIn</a></h5>    
+<h5>Email:${res.data.email}</h5>       
+<h5><a href= "https://www.linkedin.com/in/${response.linkedin}">LinkedIn</a></h5>    
 <h2 id="license"> License</h2>
 <p>${response.license}</p>        
 <h2 id="test>Tests</h2>
 <p>${response.tests}</p>`
 
-  
+
   fs.writeFile("README.md", usersInfo, function (err) {
 
     if (err) {
