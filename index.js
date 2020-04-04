@@ -136,10 +136,10 @@ function generateMD(response, res) {
 <p>${response.contributors}</p>
 <h2> Contact </h2>         
 <h5> Name: ${res.data.name}</h5>       
-<h5> Github [${response.username}](${res.data.html_url})  
-<a href= "${response.portfolio}">Portfolio</a>  
+<h5><a href= "https://github.com/${response.username}" target="_blank">GitHub</a></h5>    
+ <h5><a href= "${response.portfolio}">Portfolio</a></h5>  
 <h5>Email: []()          
-<a href= "https://www.linkedin.com/in/${response.linkedin}" target="_blank">LinkedIn</a>    
+<h5><a href= "https://www.linkedin.com/in/${response.linkedin}" target="_blank">LinkedIn</a></h5>    
 <h2> License
 ${response.license}        
 <h2>Tests
