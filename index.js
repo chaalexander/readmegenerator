@@ -46,7 +46,7 @@ function inquireQuestions() {
       {
         type: "checkbox",
         message: "Technology Used",
-        choices: ["Node.Js ", "Express ", "JavaScript ", "jQuery ", "React.js ", "React ", "GIT ", "GitHub ", "MongoDB ", "MySQL ", "Firebase ", "Handlebars ", "HTML ", "CSS ", "Bootstrap ", "Media Queries ", "APIs ", "Microsoft Suite ", "Heroku ", "Command- Line "],
+        choices: ["Node.Js", " Express", " JavaScript", " jQuery", " React.js", " React", " GIT", " GitHub", " MongoDB", " MySQL", " Firebase", " Handlebars", " HTML", " CSS", " Bootstrap", " Media Queries", " APIs", " Microsoft Suite", " Heroku", " Command- Line"],
         name: "technology"
       },
       {
@@ -116,7 +116,7 @@ function githubAPICall(userName, response) {
 function generateMD(response, res) {
 
   const usersInfo = `
-<img src="${res.data.avatar_url}" style= width:50px>
+<img style= width:50px src="${res.data.avatar_url}">
 <h1>${response.project}</h1> 
 <h2> Table of Contents </h2>
 <p><a href="#contributors">Contributors</a></p>   
@@ -131,7 +131,7 @@ function generateMD(response, res) {
 <h2 id="contributors"> Contributors </h2>
 <p>${response.contributors}</p>
 <h2> Contact </h2>         
-<h5> Name: ${res.data.name}</h5>       
+<h5> Name: ${response.name}</h5>       
 <h5><a href= "https://github.com/${response.username}" target="_blank">GitHub</a></h5>    
 <h5><a href= "${response.portfolio}">Portfolio</a></h5>  
 <h5>Email:</h5>       
