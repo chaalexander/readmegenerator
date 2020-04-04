@@ -1,12 +1,8 @@
-// write and read files
-const fs = require("fs");
-// ask question get information from somewhere
-const inquirer = require("inquirer");
-// ajaxcall
-const axios = require("axios");
-// badge for the license
-const datafire = require("datafire")
-
+const fs = require('fs');
+const inquirer = require('inquirer');
+const axios = require('axios');
+const datafire = require('datafire');
+let userName = ""
 
 function inquireQuestions() {
   inquirer
@@ -62,8 +58,7 @@ function inquireQuestions() {
 
     ])
     .then(function (response) {
-      // console.log(response);
-
+      userName = response.username;
       const usersInfo = `# <h1>${response.project}</h1>
 # <h2>Contributor
 <a href= "https://github.com/${response.username}" target="_blank">${response.username} </a>
@@ -80,33 +75,35 @@ ${response.license}
 
       // add email and profile picture inside of the contact with the api from github.
       fs.writeFile("README.md", usersInfo, function (err) {
+
         if (err) {
           return console.log(err);
         }
-        console.log("Success");
-      })
 
+        console.log("Success!");
+
+      });
+      githubAPICall();
     });
-  //end function
 }
 inquireQuestions()
 
 function githubAPICall() {
-
-  const queryUrl = `https://api.github.com/zen`;
-  // https://api.github.com/users/${username}/repos?per_page=100
+  console.log(userName);
+  const queryUrl = `https://api.github.com/users/` + userName;
 
   axios
     .get(queryUrl)
     .then(function (res) {
-      // console.log(res.data);
+      console.log(res.data);
 
 
 
     }).catch(function (err) {
+
       console.log(err);
+
     });
+
   //end function
 }
-
-// githubAPICall()
