@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const axios = require('axios');
 const badge = require('gh-badges');
 require(`dotenv`).config();
-// let userName = ""
+
 
 function inquireQuestions() {
   inquirer
@@ -12,21 +12,11 @@ function inquireQuestions() {
         message: "What is your full name?",
         name: "name"
       },
-      // {
-      //   type: "password",
-      //   message: "GitHub password",
-      //   name: "password"
-      // },
       {
         type: "input",
         message: "GitHub username",
         name: "username"
       },
-      // {
-      //     type: "password",
-      //     message: "GitHub password",
-      //     name: "password"
-      // },
       {
         type: "Input",
         message: "Project Name",
@@ -116,32 +106,39 @@ function githubAPICall(userName, response) {
 function generateMD(response, res) {
 
   const usersInfo = `
-<img style= width:50px src="${res.data.avatar_url}">
+<img src="${res.data.avatar_url}">
 <h1>${response.project}</h1> 
-<h2> Table of Contents </h2>
-<p><a href="#contributors">Contributors</a></p>   
-<h2> Description </h2>
-<p>${response.description}</p>   
-<h2> Installation </h2>
-<p>${response.installation}</p>          
-<h2> Technology Stack </h2>          
-<p>${response.technology}</p>          
-<h2> Usage </h2>
-<p>${response.usage}</p>   
 <h2 id="contributors"> Contributors </h2>
-<p>${response.contributors}</p>
-<h2> Contact </h2>         
+<li><a href= "https://github.com/${response.contributors} target="_blank">${response.contributors}</a></li> 
+<h2> Table of Contents </h2>
+<li><a href="#contributors">Contributors</a></li>   
+<li><a href="#description">Description</a></li>  
+<li><a href="#installation">Installation</a></li> 
+<li><a href="#tech">Technology Stack</a></li> 
+<li><a href="#usage">Usage</a></li> 
+<li><a href="#contact">Contact</a></li> 
+<li><a href="#license">License</a></li> 
+<li><a href="#test">Tests</a></li> 
+<h2 id="description"> Description </h2>
+<p>${response.description}</p>   
+<h2 id="installation> Installation </h2>
+<p>${response.installation}</p>          
+<h2 id="tech"> Technology Stack </h2>          
+<p>${response.technology}</p>          
+<h2 id="usage"> Usage </h2>
+<p>${response.usage}</p>   
+<h2 id="contact"> Contact </h2>         
 <h5> Name: ${response.name}</h5>       
-<h5><a href= "https://github.com/${response.username}" target="_blank">GitHub</a></h5>    
-<h5><a href= "${response.portfolio}">Portfolio</a></h5>  
-<h5>Email:</h5>       
-<h5><a href= "https://www.linkedin.com/in/${response.linkedin}" target="_blank">LinkedIn</a></h5>    
-<h2> License</h2>
+<h5><a href= "https://github.com/${response.username} target="_blank">GitHub</a></h5>    
+<h5><a href= "${response.portfolio} target="_blank">Portfolio</a></h5>  
+<h5>Email:[${res.data.email}](${res.data.email})</h5>       
+<h5><a href= "https://www.linkedin.com/in/${response.linkedin} target="_blank">LinkedIn</a></h5>    
+<h2 id="license"> License</h2>
 <p>${response.license}</p>        
-<h2>Tests</h2>
+<h2 id="test>Tests</h2>
 <p>${response.tests}</p>`
 
-  // add email and profile picture inside of the contact with the api from github.
+  
   fs.writeFile("README.md", usersInfo, function (err) {
 
     if (err) {
