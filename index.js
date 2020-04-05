@@ -47,7 +47,7 @@ function inquireQuestions() {
 
       {
         type: "input",
-        message: "Installation",
+        message: "What do you need to install to make this app to work?",
         name: "installation"
       },
       {
