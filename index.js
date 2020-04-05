@@ -127,6 +127,8 @@ function generateMD(response, res) {
 <h1>${response.project}</h1> 
 <h2 id="contributors"> Contributors </h2>
 <p>${response.contributors}</p> 
+<h2 id="installation> Installation </h2>
+<p>${response.installation}</p>  
 <h2> Table of Contents </h2>
 <li><a href="#contributors">Contributors</a></li>   
 <li><a href="#description">Description</a></li>  
@@ -138,8 +140,6 @@ function generateMD(response, res) {
 <li><a href="#tests">Tests</a></li> 
 <h2 id="description"> Description </h2>
 <p>${response.description}</p>   
-<h2 id="installation> Installation </h2>
-<p>${response.installation}</p>          
 <h2 id="tech"> Technology Stack </h2>          
 <p>${response.technology}</p>          
 <h2 id="usage"> Usage </h2>
