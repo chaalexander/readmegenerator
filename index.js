@@ -86,7 +86,7 @@ function inquireQuestions() {
     .then(function (response) {
       let userName = response.username
       const format = {
-        text: ['license', `${response.license}`],
+        text: ['license', response.license],
         color: 'green',
         template: 'flat',
       }
