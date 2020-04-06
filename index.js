@@ -83,7 +83,7 @@ function githubAPICall(userName, response) {
 
   axios
     .get(queryUrl, {
-      header: {
+      headers: {
         "Authorization": `token ${process.env.GH_TOKEN}`
       }
     })

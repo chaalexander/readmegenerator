@@ -1,6 +1,6 @@
 
 <img align="right" width="100" height="100" src="https://avatars1.githubusercontent.com/u/59755481?v=4">
-<h1 align= "center">read me</h1> 
+<h1 align= "center">Read me generator</h1> 
 <img align="left" src= "https://img.shields.io/badge/License-MIT-green">
 <hr>
 <h2 id="contributors"> Contributors </h2>
@@ -15,18 +15,18 @@
 <li><a href="#license">License</a></li> 
 <li><a href="#tests">Tests</a></li> 
 <h2 id="description"> Description </h2>
-<p>read me</p>   
+<p>Generates Read me running on node</p>   
 <h2 id="installation"> Installation </h2>
-<p>read e</p>          
+<p>npm inquirer, dotenv, axios</p>          
 <h2 id="tech"> Technology Stack </h2>          
-<p></p>          
+<p>Node.Js, JavaScript, GIT, GitHub, APIs</p>          
 <h2 id="usage"> Usage </h2>
-<p> read</p>   
+<p>Fork the repo and download the npm. Creat a token on GitHub for you and run the file.</p>   
 <h2 id="contact"> Contact </h2>         
-<h5> Name: charlennep</h5>       
+<h5> Name: Cha Alexander</h5>       
 <h5><a href= "https://github.com/chaalexander">GitHub</a></h5>    
-<h5><a href= "cahr">Portfolio</a></h5>  
-<h5>Email:null</h5>       
+<h5><a href= "https://chaalexander.github.io/">Portfolio</a></h5>  
+<h5>Email:charlennep@gmail.com</h5>       
 <h5><a href= "https://www.linkedin.com/in/cha-alexander">LinkedIn</a></h5>    
 <h2 id="tests">Tests</h2>
-<p>re</p>
+<p>?</p>
