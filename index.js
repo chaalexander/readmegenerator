@@ -3,20 +3,6 @@ const inquirer = require('inquirer');
 const axios = require('axios');
 require(`dotenv`).config();
 
-const {
-  BadgeFactory
-} = require('gh-badges')
-
-const bf = new BadgeFactory()
-
-
-
-
-
-
-
-
-
 
 function inquireQuestions() {
   inquirer
@@ -85,14 +71,6 @@ function inquireQuestions() {
     ])
     .then(function (response) {
       let userName = response.username
-      const format = {
-        text: ['license', `${response.license}`],
-        color: 'green',
-        template: 'flat',
-      }
-      const svg = bf.create(format)
-
-      response.badge = svg;
 
       githubAPICall(userName, response);
     });
@@ -129,7 +107,7 @@ function generateMD(response, res) {
 <img align="right" width="100" height="100" src="${res.data.avatar_url}">
 <h1 align= "center">${response.project}</h1> 
 <img align="left" src= "https://img.shields.io/badge/License-${response.license}-green">
-<br>
+<hr>
 <h2 id="contributors"> Contributors </h2>
 <p>${response.contributors}</p> 
 <h2> Table of Contents </h2>
@@ -158,8 +136,6 @@ function generateMD(response, res) {
 <h2 id="tests">Tests</h2>
 <p>${response.tests}</p>`
 
-
-
   fs.writeFile("README.md", usersInfo, function (err) {
 
     if (err) {
@@ -169,4 +145,6 @@ function generateMD(response, res) {
     console.log("Success!");
 
   });
-}
+
+
+};
