@@ -108,14 +108,13 @@ function generateMD(response, res) {
 <img align="right" width="100" height="100" src="${res.data.avatar_url}">
 <h1 align= "center">${response.project}</h1> 
 <h2> Table of Contents </h2>
-<li><a href="#contributors">Contributors</a></li>   
 <li><a href="#description">Description</a></li>  
 <li><a href="#installation">Installation</a></li> 
 <li><a href="#tech">Technology Stack</a></li> 
 <li><a href="#usage">Usage</a></li> 
 <li><a href="#screen">ScreenShots</a></li> 
+<li><a href="#contributors">Contributors</a></li>   
 <li><a href="#contact">Contact</a></li> 
-<li><a href="#license">License</a></li> 
 <li><a href="#tests">Tests</a></li> 
 <h2 id="description"> Description </h2>
 <p>${response.description}</p>   
