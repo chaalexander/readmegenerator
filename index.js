@@ -136,7 +136,7 @@ function generateMD(response, res) {
 <h2 id="tests">Tests</h2>
 <p>${response.tests}</p>`
 
-  fs.writeFile("README.md", usersInfo, function (err) {
+  fs.writeFile("gen-README.md", usersInfo, function (err) {
 
     if (err) {
       return console.log(err);
