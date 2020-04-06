@@ -127,7 +127,7 @@ function generateMD(response, res) {
 
   const usersInfo = `
 <img align="right" width="100" height="100" src="${res.data.avatar_url}">
-<img src= "https://img.shields.io/badge/License-${response.badge}-green">
+<img align="left" src= "https://img.shields.io/badge/License-${response.license}-green">
 <h1>${response.project}</h1> 
 <h2 id="contributors"> Contributors </h2>
 <p>${response.contributors}</p> 
