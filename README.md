@@ -10,6 +10,7 @@
 <li><a href="#installation">Installation</a></li> 
 <li><a href="#tech">Technology Stack</a></li> 
 <li><a href="#usage">Usage</a></li> 
+<li><a href="#screen">ScreenShots</a></li> 
 <li><a href="#contact">Contact</a></li> 
 <li><a href="#license">License</a></li> 
 <li><a href="#tests">Tests</a></li> 
@@ -18,14 +19,15 @@
 <h2 id="installation"> Installation </h2>
 <p>npm inquirer, dotenv, axios</p>          
 <h2 id="tech"> Technology Stack </h2>          
-<p>Node.Js, JavaScript, GIT, GitHub, APIs</p>          
+<p></p>          
 <h2 id="usage"> Usage </h2>
-<p>Fork the repo and download the npm. Creat a token on GitHub for you and run the file.</p>   
+<p>Fork the repo and download the npm. Creat a token on GitHub for you and run the file</p>   
+<h2 id="screen"> ScreenShoots </h2>
 <h2 id="contact"> Contact </h2>         
-<h5> Name: Cha Alexander</h5>       
+<h5> Name: Cha Alexander </h5>       
 <h5><a href= "https://github.com/chaalexander">GitHub</a></h5>    
 <h5><a href= "https://chaalexander.github.io/">Portfolio</a></h5>  
 <h5>Email:charlennep@gmail.com</h5>       
 <h5><a href= "https://www.linkedin.com/in/cha-alexander">LinkedIn</a></h5>    
 <h2 id="tests">Tests</h2>
-<p>?</p>
+<p>npm</p>
