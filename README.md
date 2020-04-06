@@ -1,8 +1,7 @@
 
+<img align="left" src= "https://img.shields.io/badge/License-MIT-green">
 <img align="right" width="100" height="100" src="https://avatars1.githubusercontent.com/u/59755481?v=4">
 <h1 align= "center">Read me generator</h1> 
-<img align="left" src= "https://img.shields.io/badge/License-MIT-green">
-<hr>
 <h2 id="contributors"> Contributors </h2>
 <p>chaalexander</p> 
 <h2> Table of Contents </h2>

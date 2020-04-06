@@ -104,10 +104,9 @@ function githubAPICall(userName, response) {
 function generateMD(response, res) {
 
   const usersInfo = `
+<img align="left" src= "https://img.shields.io/badge/License-${response.license}-green">
 <img align="right" width="100" height="100" src="${res.data.avatar_url}">
 <h1 align= "center">${response.project}</h1> 
-<img align="left" src= "https://img.shields.io/badge/License-${response.license}-green">
-<hr>
 <h2 id="contributors"> Contributors </h2>
 <p>${response.contributors}</p> 
 <h2> Table of Contents </h2>
