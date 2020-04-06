@@ -12,21 +12,25 @@
 <li><a href="#contact">Contact</a></li> 
 <li><a href="#tests">Tests</a></li> 
 <h2 id="description"> Description </h2>
-<p>Creating a read me running on node</p>   
+<p>Application created on Node.js to generate a Read me file.</p>   
 <h2 id="installation"> Installation </h2>
-<p>Json package included</p>          
+<p>JSON file included, just install. Get a token for your github call.</p>          
 <h2 id="tech"> Technology Stack </h2>          
-<p>Node.Js</p>          
+<p> JavaScript, Node.js, AJAX, GitHub</p>          
 <h2 id="usage"> Usage </h2>
-<p>git</p>   
+<p>Created to help a user to create a read me file faster. By running the code you are able to write a read me faster</p>   
 <h2 id="screen"> ScreenShoots </h2>
+<img src= "image/Screen Shot .png">
+<img src= "image/Screen Shot 1.png">
+<img src= "image/Screen Shot 2.png">
+<img src= "image/Screen Shot 3.png">
 <h2 id="contributors"> Contributors </h2>
-<p>chaalexander</p> 
+<p><a href= "https://github.com/chaalexander">@chaalexander</a></p> 
 <h2 id="contact"> Contact </h2>         
-<h5> Name: Cha Alexander</h5>       
-<h5><a href= "https://github.com/chaalexander" target="_blank" >GitHub</a></h5>    
-<h5><a href= "https://chaalexander.github.io/" target="_blank" >Portfolio</a></h5>  
+<h5> Name: Charlenne Alexander </h5>       
+<h5><a href= "https://github.com/chaalexander">GitHub</a></h5>  
+<h5><a href= "https://chaalexander.github.io/">Portfolio</a></h5>  
 <h5><a href= "mailto:charlennep@gmail.com">charlennep@gmail.com</a></h5>       
-<h5><a href= "https://www.linkedin.com/in/cha-alexander" target="_blank" >LinkedIn</a></h5>    
+<h5><a href= "https://www.linkedin.com/in/cha-alexander">LinkedIn</a></h5>    
 <h2 id="tests">Tests</h2>
-<p>test3</p>
+<p><img src= "image/gif.gif"></p>
