@@ -21,12 +21,12 @@
 <p>Fork the repo and download the npm. Creat a token on GitHub for you and run the file</p>   
 <h2 id="screen"> ScreenShoots </h2>
 <h2 id="contributors"> Contributors </h2>
-<p>chaalexander</p> 
+<p>@chaalexander</p> 
 <h2 id="contact"> Contact </h2>         
 <h5> Name: Cha Alexander</h5>       
-<h5><a href= "https://github.com/chaalexander">GitHub</a></h5>    
-<h5><a href= "https://chaalexander.github.io/">Portfolio</a></h5>  
-<h5>Email:charlennep@gmail.com</h5>       
-<h5><a href= "https://www.linkedin.com/in/cha-alexander">LinkedIn</a></h5>    
+<h5><a target="_blank" href= "https://github.com/chaalexander">GitHub</a></h5>    
+<h5><a target="_blank" href= "https://chaalexander.github.io/">Portfolio</a></h5>  
+<h5>charlennep@gmail.com</h5>       
+<h5><a target="_blank" href= "https://www.linkedin.com/in/cha-alexander">LinkedIn</a></h5>    
 <h2 id="tests">Tests</h2>
-<p></p>
+<p>npm</p>
