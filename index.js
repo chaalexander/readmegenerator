@@ -3,22 +3,18 @@ const inquirer = require('inquirer');
 const axios = require('axios');
 require(`dotenv`).config();
 
-// const {
-//   BadgeFactory
-// } = require('gh-badges')
+const {
+  BadgeFactory
+} = require('gh-badges')
 
-// const bf = new BadgeFactory()
-
-// const format = {
-//   text: ['license', `${response.license}`],
-//   color: 'green',
-//   template: 'flat',
-// }
-
-// const svg = bf.create(format)
+const bf = new BadgeFactory()
 
 
-// const badge = require('gh-badges');
+
+
+
+
+
 
 
 
@@ -52,7 +48,7 @@ function inquireQuestions() {
       {
         type: "checkbox",
         message: "Technology Used",
-        choices: ["Node.Js", " Express", " JavaScript", " jQuery", " React.js", " React", " GIT", " GitHub", " MongoDB", " MySQL", " Firebase", " Handlebars", " HTML", " CSS", " Bootstrap", " Media Queries", " APIs", " Microsoft Suite", " Heroku", " Command-Line"],
+        choices: ["Node.Js", " Express", " JavaScript", " jQuery", " React.js", " React", " GIT", " GitHub", " MongoDB", " MySQL", " Firebase", " Handlebars", " HTML", " CSS", " Bootstrap", " Media Queries", " APIs", " Microsoft Suite", " Heroku", " Command- Line"],
         name: "technology"
       },
       {
@@ -89,6 +85,14 @@ function inquireQuestions() {
     ])
     .then(function (response) {
       let userName = response.username
+      const format = {
+        text: ['license', `${response.license}`],
+        color: 'green',
+        template: 'flat',
+      }
+      const svg = bf.create(format)
+
+      response.badge = svg;
 
       githubAPICall(userName, response);
     });
@@ -124,6 +128,8 @@ function generateMD(response, res) {
   const usersInfo = `
 <img align="right" width="100" height="100" src="${res.data.avatar_url}">
 <h1>${response.project}</h1> 
+
+<img align="left" src= "${response.badge}">
 <h2 id="contributors"> Contributors </h2>
 <p>${response.contributors}</p> 
 <h2> Table of Contents </h2>
@@ -149,10 +155,9 @@ function generateMD(response, res) {
 <h5><a href= "${response.portfolio}">Portfolio</a></h5>  
 <h5>Email:${res.data.email}</h5>       
 <h5><a href= "https://www.linkedin.com/in/${response.linkedin}">LinkedIn</a></h5>    
-<h2 id="license"> License</h2>
-<p>${response.license}</p>        
 <h2 id="tests">Tests</h2>
 <p>${response.tests}</p>`
+
 
 
   fs.writeFile("README.md", usersInfo, function (err) {
