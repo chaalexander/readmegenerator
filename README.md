@@ -12,21 +12,21 @@
 <li><a href="#contact">Contact</a></li> 
 <li><a href="#tests">Tests</a></li> 
 <h2 id="description"> Description </h2>
-<p>Generates Read me running on node</p>   
+<p>Creating a read me running on node</p>   
 <h2 id="installation"> Installation </h2>
-<p>Json package inclueded</p>          
+<p>Json package included</p>          
 <h2 id="tech"> Technology Stack </h2>          
-<p>Node.Js, JavaScript, GIT, GitHub, APIs</p>          
+<p>Node.Js</p>          
 <h2 id="usage"> Usage </h2>
-<p>Fork the repo and download the npm. Creat a token on GitHub for you and run the file</p>   
+<p>git</p>   
 <h2 id="screen"> ScreenShoots </h2>
 <h2 id="contributors"> Contributors </h2>
-<p>@chaalexander</p> 
+<p>chaalexander</p> 
 <h2 id="contact"> Contact </h2>         
 <h5> Name: Cha Alexander</h5>       
-<h5><a target="_blank" href= "https://github.com/chaalexander">GitHub</a></h5>    
-<h5><a target="_blank" href= "https://chaalexander.github.io/">Portfolio</a></h5>  
-<h5>charlennep@gmail.com</h5>       
-<h5><a target="_blank" href= "https://www.linkedin.com/in/cha-alexander">LinkedIn</a></h5>    
+<h5><a href= "https://github.com/chaalexander" target="_blank" >GitHub</a></h5>    
+<h5><a href= "https://chaalexander.github.io/" target="_blank" >Portfolio</a></h5>  
+<h5><a href= "mailto:charlennep@gmail.com">charlennep@gmail.com</a></h5>       
+<h5><a href= "https://www.linkedin.com/in/cha-alexander" target="_blank" >LinkedIn</a></h5>    
 <h2 id="tests">Tests</h2>
-<p>npm</p>
+<p>test3</p>
