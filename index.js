@@ -86,7 +86,7 @@ function inquireQuestions() {
     .then(function (response) {
       let userName = response.username
       const format = {
-        text: ['license', response.license],
+        text: ['license', `${response.license}`],
         color: 'green',
         template: 'flat',
       }
@@ -127,7 +127,7 @@ function generateMD(response, res) {
 
   const usersInfo = `
 <img align="right" width="100" height="100" src="${res.data.avatar_url}">
-${response.badge}
+<img src= "https://img.shields.io/badge/License-${response.badge}-green">
 <h1>${response.project}</h1> 
 <h2 id="contributors"> Contributors </h2>
 <p>${response.contributors}</p> 
