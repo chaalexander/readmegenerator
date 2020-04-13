@@ -72,10 +72,10 @@ const questions = [{
 ]
 
 
-function inquireQuestions() {
+const inquireQuestions = () => {
   inquirer
     .prompt(questions)
-    .then(async function (response) {
+    .then(async response => {
       let userName = response.username
       try {
         const resp = await githubAPICall(userName);

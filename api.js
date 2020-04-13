@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-function githubAPICall(userName) {
+const githubAPICall = userName => {
     console.log(userName);
     const queryUrl = `https://api.github.com/users/` + userName;
 
@@ -10,11 +10,11 @@ function githubAPICall(userName) {
                 "Authorization": `token ${process.env.GH_TOKEN}`
             }
         })
-        .then(function (res) {
+        .then(res => {
             console.log(res.data);
             return res
 
-        }).catch(function (err) {
+        }).catch(err => {
 
             console.log(err);
 

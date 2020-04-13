@@ -1,4 +1,4 @@
-function generateMD(response, res) {
+const generateMD = (response, res) => {
 
   return `
   <img align="left" src= "https://img.shields.io/badge/License-${response.license}-green">

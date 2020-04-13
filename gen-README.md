@@ -16,14 +16,14 @@
   <h2 id="installation"> Installation </h2>
   <p>test</p>          
   <h2 id="tech"> Technology Stack </h2>          
-  <p></p>          
+  <p>Node.Js</p>          
   <h2 id="usage"> Usage </h2>
   <p>test</p>   
   <h2 id="screen"> ScreenShoots </h2>
   <h2 id="contributors"> Contributors </h2>
   <p>test</p> 
   <h2 id="contact"> Contact </h2>         
-  <h5> Name: Chalenne</h5>       
+  <h5> Name: Cha</h5>       
   <h5><a href= "https://github.com/chaalexander">GitHub</a></h5>  
   <h5><a href= "test">Portfolio</a></h5>  
   <h5><a href= "mailto:charlennep@gmail.com">charlennep@gmail.com</a></h5>       
