@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/chaalexander/readmegenerator#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "gh-badges": "^2.2.1",
     "inquirer": "^7.1.0"
